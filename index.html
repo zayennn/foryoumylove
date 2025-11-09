@@ -166,7 +166,6 @@
                 tab.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
                     
-                    // Update active tab
                     tabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     
