@@ -169,7 +169,6 @@
                     tabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Show corresponding content
                     tabContents.forEach(content => {
                         content.classList.remove('active');
                         if (content.id === targetTab) {
