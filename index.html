@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="password-modal" id="passwordModal">
-        <div class="password-content">
             <h2>Enter the secret code</h2>
-            <input type="password" class="password-input" id="passwordInput" placeholder="Our special word...">
             <button class="submit-btn" id="submitPassword">Enter</button>
         </div>
     </div>
@@ -156,7 +153,6 @@
                 }
             });
             
-            // Allow Enter key to submit password
             passwordInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     submitPassword.click();
