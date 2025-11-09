@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const passwordModal = document.getElementById('passwordModal');
     const welcomeScreen = document.getElementById('welcomeScreen');
     const mainContent = document.getElementById('mainContent');
     const passwordInput = document.getElementById('passwordInput');
     const submitPassword = document.getElementById('submitPassword');
 
-    submitPassword.addEventListener('click', function () {
+    submitPassword.addEventListener('click', function() {
         if (passwordInput.value.toLowerCase() === 'babycakes') {
             passwordModal.style.opacity = '0';
             setTimeout(() => {
                 passwordModal.style.display = 'none';
                 welcomeScreen.style.display = 'flex';
-
+                
                 setTimeout(() => {
                     welcomeScreen.style.opacity = '0';
                     setTimeout(() => {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    passwordInput.addEventListener('keypress', function (e) {
+    passwordInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             submitPassword.click();
         }
@@ -39,25 +39,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
-
+    
     tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
+        tab.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-tab');
-
+            
             tabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
-
+            
             tabContents.forEach(content => {
                 content.classList.remove('active');
-                if (content.id === targetTab) {
-                    content.classList.add('active');
-                }
+                if (content.id === targetTab) content.classList.add('active');
             });
         });
     });
 
     const loveLetter = document.getElementById('loveLetter');
-    loveLetter.addEventListener('click', function () {
+    loveLetter.addEventListener('click', function() {
         this.classList.toggle('expanded');
     });
 
@@ -71,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             heart.style.animationDelay = Math.random() * 5 + 's';
             document.body.appendChild(heart);
         }
-
+        
         for (let i = 0; i < 5; i++) {
             const teddy = document.createElement('div');
             teddy.classList.add('teddy-bear');
