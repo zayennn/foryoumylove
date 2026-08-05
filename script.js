@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             passwordInput.style.borderColor = '#ff4d4d';
             setTimeout(() => {
                 passwordInput.style.borderColor = '#ffb7c5';
-                passwordInput.placeholder = 'Our special word...';
+                passwordInput.placeholder = 'TEST';
             }, 1500);
         }
     });
